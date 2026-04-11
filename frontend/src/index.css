@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    @apply m-0 bg-slate-950 text-slate-100 antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  a {
+    @apply no-underline;
+  }
+}
+
+@layer components {
+  .bg-app {
+    background:
+      radial-gradient(circle at top left, rgba(34, 211, 238, 0.14), transparent 26%),
+      radial-gradient(circle at bottom right, rgba(217, 70, 239, 0.12), transparent 22%),
+      linear-gradient(135deg, #020617 0%, #0f172a 50%, #111827 100%);
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-white/[0.06] shadow-[0_24px_80px_rgba(2,6,23,0.45)] backdrop-blur-2xl;
+  }
+}
+
+#root {
+  min-height: 100vh;
+}
